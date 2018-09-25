@@ -2,7 +2,7 @@
 
 ## Applications
 * Login
-* ![Workspace](App-CentOS-48.tiff) Workspace
+* ![Workspace](App-CentOS-48.png) Workspace
 * Preferences
 * Terminal
 
