@@ -1,5 +1,9 @@
-# News
+## News
 
-# Applications
+## Applications
+* Login
+* Workspace
+* Preferences
+* Terminal
 
-# Progress
+## Progress
