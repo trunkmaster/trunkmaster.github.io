@@ -1,4 +1,4 @@
-## News
+## NEXTSPACE News
 
 ### 06.12.2018
 
