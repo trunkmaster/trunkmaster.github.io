@@ -5,7 +5,7 @@
 It seems that I've completed focus management task.
 Additinally I've managed to fix misterious unmap/map of appicon on double-click.
 
-Next: document all changes and concepts of focus management related things.
+Next: I need to document all changes and describe concepts of focus management related things.
 
 ### 06.12.2018
 
