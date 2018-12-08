@@ -1,5 +1,12 @@
 ## ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 08.12.2018
+
+It seems that I've completed focus management task.
+Additinally I've managed to fix misterious unmap/map of appicon on double-click.
+
+Next: document all changes and concepts of focus management related things.
+
 ### 06.12.2018
 
 Several major changes in focus management task:
