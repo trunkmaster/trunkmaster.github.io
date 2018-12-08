@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ## (NEXTSPACE.tiff) NEXTSPACE News
+=======
+## ![NEXTSPACE](NEXTSPACE.tiff) NEXTSPACE News
+>>>>>>> c557c0867494d244f2e13391000c733ee69be855
 
 ### 06.12.2018
 
