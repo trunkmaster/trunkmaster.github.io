@@ -1,5 +1,11 @@
 ## ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 11.12.2018
+
+I've finished some documentation on focus management. Although exstensive testing, fixing and polishing is ahead.
+Beacuse of frequent crashes and logouts/logins, I make development inside VM. 
+Once I'll be happy with focus management feature I move to real hardware. That's where I can deal with sound, power, networking.
+
 ### 08.12.2018
 
 It seems that I've completed focus management task.
