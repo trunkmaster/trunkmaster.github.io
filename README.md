@@ -1,5 +1,13 @@
 ## ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 13.12.2018
+
+Fixes, fixes, fixes... to focus management again. 
+
+Last couple of days I've tested focus management with IntelliJ IDEA.
+This application has interesting startup sequence from focus management point of view. Now WM became more mature in 
+handling such applications. 
+
 ### 11.12.2018
 
 I've finished some documentation on focus management. Although exstensive testing, fixing and polishing is ahead.
