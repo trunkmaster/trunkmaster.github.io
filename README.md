@@ -1,5 +1,21 @@
 ## ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 24.12.2018
+
+I guess now I've fixed most of the focus switch issues. Moreover, now GNUstep GUI backend correctly process "Hide" and
+"Minimize Window" operations with respect to WM application state information. "Hide" sends message to WM. WM draws 
+animation of hiding application and mark application windows as hidden. This is very important to have GNUstep and WM 
+vision synchronized.
+
+> For the record - there are several methods of performing such operations:
+> * Hide - Cmd-h shortcut, right-click on Miniaturize window titlebar button, "Hide" right-click menu on appicon (for 
+> X11 applications only).
+> * Miniaturize Window - Cmd-m, left-click on Miniaturize titlebar button
+> For GNUstep applications these operations are handled differently then to X11 applications.
+
+Now I'm developing inside NEXTSPACE environment. I suppose that more bugs will be revealed. However I'm switching to 
+other project tasks (Preferences, Terminal). 
+
 ### 13.12.2018
 
 Fixes, fixes, fixes... to focus management again. 
@@ -10,9 +26,10 @@ handling such applications.
 
 ### 11.12.2018
 
-I've finished some documentation on focus management. Although exstensive testing, fixing and polishing is ahead.
-Beacuse of frequent crashes and logouts/logins, I make development inside VM. 
-Once I'll be happy with focus management feature I move to real hardware. That's where I can deal with sound, power, networking.
+I've finished documenting some aspect of focus management. Although extensive testing, fixing and polishing are ahead.
+Because of frequent crashes and logouts/logins, I make development inside VM. 
+Once I'll be happy with focus management feature, I move to real hardware. That's where I can deal with sound, power, 
+networking.
 
 ### 08.12.2018
 
@@ -28,7 +45,7 @@ Several major changes in focus management task:
    from WM.
 2. When GNUstep application deactivates main menu left managed by WM now. Considering
    change to GNUstep GUI backend, main menu can now be used to activate GNUstep application
-   with WM's wSetFocusTo() without direct calling of [NSApp activateIgnoringOtherApps:] (it's
+   with WM's wSetFocusTo() without direct calling of `[NSApp activateIgnoringOtherApps:]` (it's
    implemented in XWActivateApplication).
 3. Cmd-Tab (Switch Panel) now creates list of applications (not windows). Switch to application
    that was openened on particular workspace switches to that workspace.
