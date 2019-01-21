@@ -1,4 +1,26 @@
-## ![Logo](NEXTSPACE.png) NEXTSPACE News
+# ![Logo](NEXTSPACE.png) NEXTSPACE News
+
+### 21.01.2019
+Last month I've spent for exercises with Linux audio subsystems. Namely ALSA and PulseAudio. For that reason I've 
+created a application Mixer inside Frameworks/Tests. There some results:
+* I have fully working ALSA mixer (thanks to [@alexmyczko](https://github.com/alexmyczko) for his [VolumeControl.app](https://github.com/alexmyczko/VolumeControl.app) - that was a starting point for me).
+* ALSA and PulseAudio events handling implemented in separate GCD thread for both subsystems.
+* PulseAudio looks like more preferred method of sound card settings tweaking:
+    * I can easily determine default input and output. This is important for "Sound Preferences" panel where only 2 
+    simple controls provided by design.
+    * I can switch input and output on per application basis.
+    * It will be possible to add comprehensive sound routing management in future "Sound Mixer". 
+* NextSpace needs separate application - "Sound Mixer" - to perform more complex sound settings edidting (switching 
+outputs, selecting input device for sound capturing, etc.)
+
+I need to finish PulseAudio code inside Mixer. Next is create NXSound implementation that can manage ALSA and PulseAudio
+with one set of methods.
+
+Here are some screenshts of Mixer:
+
+![ALSA Mixer](ALSAMixer-1.png) ![ALSA Mixer](ALSAMixer-2.png) ![ALSA Mixer](ALSAMixer-3.png)
+
+![PulseAudio Mixer](PAMixer.png) 
 
 ### 24.12.2018
 
