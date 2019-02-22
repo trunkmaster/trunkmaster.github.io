@@ -6,24 +6,30 @@ the NeXT's one, however, due to asynchronous nature of PulseAudio it's different
 provide access to sound subsystem properties in quite simple fashion for both type of applications: mixer and
 player/recorder. I want it to have switchable backends (ALSA, PulseAudio, OSS). Here is a supposed code example:
 ```objectivec
-SKSoundServer *server;
-SKSoundOut    *output;
-SKSoundStream *stream;
+#import <Fountation/Foundation.h>
+#import <SoundKit/SoundKit.h>
 
-server = [[SKSoundServer alloc] initOnHost:nil
-                                      type:SKPulseAudioType];
-output = [server defaultOutput];
-stream = [[SKSoundPlayStream alloc] initOnDevice:output];
+- (void) playSound
+{
+  SKSoundServer *server;
+  SKSoundOut    *output;
+  SKSoundStream *stream;
 
-// somewhere is a code to open sound file, decoding it's contents into `buffer`
+  server = [[SKSoundServer alloc] initOnHost:nil
+                                        type:SKPulseAudioType];
+  output = [server defaultOutput];
+  stream = [[SKSoundPlayStream alloc] initOnDevice:output];
 
-[stream playBuffer:buffer size:bufferSize];
+  // somewhere is a code to open sound file, decoding it's contents into `buffer`
 
-[stream release];
-[output release];
+  [stream playBuffer:buffer size:bufferSize];
 
-[server disconnect];
-[server release];
+  [stream release];
+  [output release];
+
+  [server disconnect];
+  [server release];
+}
 ```
 
 The first task is to implement parts of SoundKit to have a working Mixer for sound properties adjustements: volume 
