@@ -9,7 +9,7 @@ player/recorder. I want it to have switchable backends (ALSA, PulseAudio, OSS). 
 #import <Fountation/Foundation.h>
 #import <SoundKit/SoundKit.h>
 
-- (void) playSound
+- (void)playSound
 {
   SKSoundServer *server;
   SKSoundOut    *output;
@@ -20,7 +20,7 @@ player/recorder. I want it to have switchable backends (ALSA, PulseAudio, OSS). 
   output = [server defaultOutput];
   stream = [[SKSoundPlayStream alloc] initOnDevice:output];
 
-  // somewhere is a code to open sound file, decoding it's contents into `buffer`
+  // some code to open sound file, decoding it's contents into `buffer`
 
   [stream playBuffer:buffer size:bufferSize];
 
