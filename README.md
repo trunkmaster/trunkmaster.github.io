@@ -3,8 +3,8 @@
 ### 22.02.2019
 Excercising with Linux audio subsystem I end up with SoundKit framework implementation :). It's quite similiar to
 the NeXT's one, however, due to asynchronous nature of PulseAudio it's different in some places. This framework aimed to 
-provide access to sound subsystem properties for both type of applications: mixer and player/recorder in quite simple 
-fashion. I want it to have switchable backends (ALSA, PulseAudio, OSS). Here is a supposed code example:
+provide access to sound subsystem properties in quite simple fashion for both type of applications: mixer and
+player/recorder. I want it to have switchable backends (ALSA, PulseAudio, OSS). Here is a supposed code example:
 ```objectivec
 SKSoundServer *server = [[SKSoundServer alloc] initOnHost:nil type:SKPulseAudioType];
 SKSoundOut    *output = [server defaultOutput];
@@ -22,9 +22,10 @@ SKSoundStream *stream = [[SKSoundPlayStream alloc] initOnDevice:output];
 
 The first task is to implement parts of SoundKit to have a working Mixer for sound properties adjustements: volume 
 (common and application specific), mute, output/input port and profile selection. This task involves implementation of
-SoundServer, SoundDevice and SoundOut/SoundIn classes. The next task will be implement stream classes for play/record.
+SoundServer, SoundDevice and SoundOut/SoundIn classes. The next task is implementation of stream classes for play/record.
  
-For the testing purpuses I create Player application (very simple, to play .snd files) with integrated Mixer.
+For the testing purposes I created the Player application (very simple) with integrated Mixer.
+
 ![Player](Player.png)
 
 More to come - stay tuned! Have a nice days!
