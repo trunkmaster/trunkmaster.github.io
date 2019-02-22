@@ -1,5 +1,34 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 22.02.2019
+Excercising with Linux audio subsystem I end up with SoundKit framework implementation :). It's quite similiar to
+the NeXT's one, however, due to asynchronous nature of PulseAudio it's different in some places. This framework aimed to 
+provide access to sound subsystem properties for both type of applications: mixer and player/recorder in quite simple 
+fashion. I want it to have switchable backends (ALSA, PulseAudio, OSS). Here is a supposed code example:
+```objectivec
+SKSoundServer *server = [[SKSoundServer alloc] initOnHost:nil type:SKPulseAudioType];
+SKSoundOut    *output = [server defaultOutput];
+SKSoundStream *stream = [[SKSoundPlayStream alloc] initOnDevice:output];
+
+// somewhere is a code to open sound file, decoding it's contents into `buffer`
+
+[stream playBuffer:buffer size:bufferSize];
+
+[stream release];
+[output release];
+[server disconnect];
+[server release]
+```
+
+The first task is to implement parts of SoundKit to have a working Mixer for sound properties adjustements: volume 
+(common and application specific), mute, output/input port and profile selection. This task involves implementation of
+SoundServer, SoundDevice and SoundOut/SoundIn classes. The next task will be implement stream classes for play/record.
+ 
+For the testing purpuses I create Player application (very simple, to play .snd files) with integrated Mixer.
+![Player](Player.png)
+
+More to come - stay tuned! Have a nice days!
+
 ### 21.01.2019
 Last month I've spent for exercises with Linux audio subsystems. Namely ALSA and PulseAudio. For that reason I've 
 created a application Mixer inside Frameworks/Tests. There some results:
