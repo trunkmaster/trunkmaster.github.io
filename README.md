@@ -60,9 +60,7 @@ with one set of methods.
 
 Here are some screenshts of Mixer:
 
-![ALSA Mixer](ALSAMixer-1.png) ![ALSA Mixer](ALSAMixer-2.png) ![ALSA Mixer](ALSAMixer-3.png)
-
-![PulseAudio Mixer](PAMixer.png) 
+![ALSA Mixer](ALSAMixer-1.png) ![ALSA Mixer](ALSAMixer-2.png) ![ALSA Mixer](ALSAMixer-3.png) ![PulseAudio Mixer](PAMixer.png) 
 
 ### 24.12.2018
 
