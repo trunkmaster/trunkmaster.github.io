@@ -8,16 +8,17 @@ You may noticed a lot of issues has been appeared. I've converted all tasks in p
 I guess it's more noticeable way to present project progress. Also it's handy to have some history of features evolution for
 writing future documentation.
 
-- **SoundKit:** finished implementation of methods to control sound subsystem properties (volume, mute, etc.). Play/record 
-functionality will be the next task.
+- **Sound:** _SoundKit_ now has implementated methods for sound subsystem properties control (volume, mute, etc.). Play/record 
+functionality will be the next task. All _Sound Preferences_ controls has been implemented except "Advanced Preferences" panel
+(Mixer).
 
 - **Workspace:** rewritten application termination sequence. I had to implement private NSApplicationMain() to quit runloop 
 and return to main(). After that Workspace can correctly finish window manager lifecycle. Defaults written to disk on 
 application quit - no more defaults corruption and application segfualting occur. Removed a lot of WindowMaker resources and code. Now it's part of Workspace is not WindowMaker anymore. It's Window Manger or WM. I plan to get rid of WINGs and rewrite 
 WM on Objective-C (likely in version 2.0).
 
-- **Build toolchain:** I decide to push my local changes to upstream project - GNUstep. During the preperation process I switched to LLVM/clang 7.0.1, libdispatch updated to current github code (it seems they implemented it's own kqueue and 
-pthread_workqueue - no need to have additional packaged for it), libobjc2 2.0, GNUstep Make 2.7.0. There are no RPMs so far.
+- **Build toolchain:** I've decided to push my local changes to upstream project - GNUstep. During the prepare I switched to LLVM/clang 7.0.1, libdispatch updated to current github code (it seems they have implemented it's own kqueue and 
+pthread_workqueue - no need to have additional packages), libobjc2 2.0, GNUstep Make 2.7.0. There are no RPMs so far.
 
 - **GNUstep:** merged improvements are: _autolaunch_ functionality, interconnection with WM during application hiding, GNUstep appicon now passes double-click to WM, fixes to "Font Panel" weird look and behaviour on WM.
 
