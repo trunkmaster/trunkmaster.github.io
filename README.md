@@ -9,8 +9,8 @@ I guess it's more noticeable way to present project progress. Also it's handy to
 writing future documentation.
 
 - **Sound:** _SoundKit_ now has implemented methods for sound subsystem properties control (volume, mute, etc.). Play/record 
-functionality will be the next task. All _Sound Preferences_ controls has been implemented except "Advanced Preferences" panel
-(Mixer).
+functionality will be the next task. All _Sound Preferences_ controls has been implemented except "Advanced Sound Preferences" 
+panel(Mixer).
 
 - **Workspace:** rewritten application termination sequence. I had to implement private NSApplicationMain() to quit runloop 
 and return to main(). After that Workspace can correctly finish window manager lifecycle. Defaults written to disk on 
