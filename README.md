@@ -1,5 +1,31 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 09.04.2019
+Last month was dedicated to several activities.
+
+- **Projects, tasks, issues and milestones:**
+You may noticed a lot of issues has been appeared. I've converted all tasks in projects into issues with link to milestones. 
+I guess it's more noticeable way to present project progress. Also it's handy to have some history of features evolution for
+writing future documentation.
+
+- **SoundKit:** finished implementation of methods to control sound subsystem properties (volume, mute, etc.). Play/record 
+functionality will be the next task.
+
+- **Workspace:** rewritten application termination sequence. I had to implement private NSApplicationMain() to quit runloop 
+and return to main(). After that Workspace can correctly finish window manager lifecycle. Defaults written to disk on 
+application quit - no more defaults corruption and application segfualting occur. Removed a lot of WindowMaker resources and code. Now it's part of Workspace is not WindowMaker anymore. It's Window Manger or WM. I plan to get rid of WINGs and rewrite 
+WM on Objective-C (likely in version 2.0).
+
+- **Build toolchain:** I decide to push my local changes to upstream project - GNUstep. During the preperation process I switched to LLVM/clang 7.0.1, libdispatch updated to current github code (it seems they implemented it's own kqueue and 
+pthread_workqueue - no need to have additional packaged for it), libobjc2 2.0, GNUstep Make 2.7.0. There are no RPMs so far.
+
+- **GNUstep:** merged improvements are: _autolaunch_ functionality, interconnection with WM during application hiding, GNUstep appicon now passes double-click to WM, fixes to "Font Panel" weird look and behaviour on WM.
+
+I've lost my writing permissions to GNUstep repository and pushing chages to GNUstep takes more time than I plan to spend.
+GNUstep _art_ backend now marked as deprecated. IMHO _cairo_ backend need more fixes to be considered as "production ready".
+Despite of this, _cairo_ backend looks promising and I'll continue to make fixes and improvements to it.
+Meanwhile, current NEXTSPACE implementation will stick to _art_ and outdated Base, GUI and Back.
+
 ### 22.02.2019
 Excercising with Linux audio subsystem I end up with SoundKit framework implementation :). It's quite similiar to
 the NeXT's one, however, due to asynchronous nature of PulseAudio it's different in some places. This framework aimed to 
