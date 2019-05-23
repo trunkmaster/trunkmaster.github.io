@@ -1,5 +1,52 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 25.05.2019
+Almost 2 months have passed since previous news, but a lot of things happend.
+
+**First,** I've decided to bake a new intermediate release of NEXTSPACE - 0.85. The
+main idea behind this intention is to present bunch of changes against 0.8 version 
+(including genuine frameworks and applications). Here they are:
+
+- New build toolchain - clang 7.0.1 with some backported patches from 8.0.
+- New version of libdispatch from Apple Swift 5.0 repository.
+- Bleeding edge versions of GNUstep Make, Base, GORM, ProjectCenter;
+- New version of libobjc2 - 2.0.
+- Refactored NXAppKit, NXFoundation frameworks and merged into DesktopKit - this is 
+more relevant name to reflect purpose of included classes (however classes prefix 
+was changed from `NX` to `NXT` to save link to NeXT - classes are aimed to bring 
+NeXT Desktop);
+- New SoundKit framework. The basic idea behind the kit is to provide sound output and input facility to applications, sound control (per application and per output 
+mixer: mute, volume, profiles). Encoding and decoding of sounds (read/write formats, tags handling, etc) is a responsiblity of the applications (or maybe a separate 
+framework like MusicKit).
+- Sound Preferences - uses sound controls facility of SoundKit - 
+- Handcrafted mouse cursor theme - mix of NeXT and MacOS styles (details are [here](https://github.com/trunkmaster/nextspace/wiki/Mouse-Cursors)).
+- NeXT like, but colorful animated boot splash Plymouth theme.
+- Plenty of enhancements and fixes to Workspace. I don't recall all of them (most of them described at [Workspace project page](https://github.com/trunkmaster/nextspace/projects/4)). Main areas of enhancements are:
+
+  - appicons: click, double-click, right-click menu;
+  - window focus handling: manual switch between windows of application and applications; Dock and Icon Yard management (configuration and hiding/showing); focus switch on window appearing and closing; focus switch after workspace switch;
+  - visual (window shaking) and audible bell (configurued in Sound Preferences);
+  - uniform behaviour of X Window and GNUstep applications for hide/miniaturize/maximize actoins;
+  - Recycler, Icon Viwer and Launcher implementation and fixes;
+  - drag and drop fixes in File Viewer, Recycler. Applications can be dragged and dropped from Fiel Viewer's Shelf into Dock.
+  - configurable autolaunch of docked applications;
+  - workspaces configuration (count, shortcuts, display active workspace number in appicon);
+  - session management: remember applications on logout and restart on logon;
+  - etc.
+- TimeMon and TextEdit cleanups;
+
+**Second,** almost all my patches to GNUstep libraries went upstream. Although I've 
+decided to base 0.85 release on quite outdated version of GNUstep GUI and Back 
+libraries - 0.25.0 (current version is 0.27.0). This is due to the 2 reasons: 1. I 
+sticked to the ART GUI backend. 2. 0.25.1 version intruduced regresssion in string 
+drawing (NSStringDrawing now has rewritten cache handling which works weird 
+with ART backend). I will return to master branch of GUI and Back after I'll be happy 
+with NEXTSPACE functionality implementation.
+
+**So,** for the next several weeks I plan to create the 0.85 release. After that I'll continue to close issues tagged to 1.0 release.
+
+Keep calm and be happy. :)
+
 ### 09.04.2019
 Last month was dedicated to several activities.
 
