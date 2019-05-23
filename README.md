@@ -1,7 +1,7 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
 ### 25.05.2019
-Almost 2 months have passed since previous news, but a lot of things happend.
+Almost 2 months have passed since previous news and a lot of things happend.
 
 **First,** I've decided to bake a new intermediate release of NEXTSPACE - 0.85. The
 main idea behind this intention is to present bunch of changes against 0.8 version 
@@ -22,7 +22,7 @@ framework like MusicKit).
 - Handcrafted mouse cursor theme - mix of NeXT and MacOS styles (details are [here](https://github.com/trunkmaster/nextspace/wiki/Mouse-Cursors)).
 - NeXT like, but colorful animated boot splash Plymouth theme.
 - Plenty of enhancements and fixes to Workspace. I don't recall all of them (most of them described at [Workspace project page](https://github.com/trunkmaster/nextspace/projects/4)). Main areas of enhancements are:
-
+  
   - appicons: click, double-click, right-click menu;
   - window focus handling: manual switch between windows of application and applications; Dock and Icon Yard management (configuration and hiding/showing); focus switch on window appearing and closing; focus switch after workspace switch;
   - visual (window shaking) and audible bell (configurued in Sound Preferences);
