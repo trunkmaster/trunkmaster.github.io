@@ -7,21 +7,21 @@ Almost 2 months have passed since previous news and a lot of things happend.
 main idea behind this intention is to present bunch of changes against 0.8 version 
 (including genuine frameworks and applications). Here they are:
 
-- New build toolchain - clang 7.0.1 with some backported patches from 8.0.
-- New version of libdispatch from Apple Swift 5.0 repository.
-- Bleeding edge versions of GNUstep Make, Base, GORM, ProjectCenter;
-- New version of libobjc2 - 2.0.
-- Refactored NXAppKit, NXFoundation frameworks and merged into DesktopKit - this is 
+- New build toolchain - **clang 7.0.1** with some backported patches from 8.0.
+- New version of **libdispatch from Apple Swift 5.0** repository.
+- Bleeding edge versions of **GNUstep Make, Base, GORM, ProjectCenter**;
+- New version of **libobjc2 - 2.0**.
+- Refactored NXAppKit, NXFoundation frameworks and merged into **DesktopKit** - this is 
 more relevant name to reflect purpose of included classes (however classes prefix 
 was changed from `NX` to `NXT` to save link to NeXT - classes are aimed to bring 
 NeXT Desktop);
-- New SoundKit framework. The basic idea behind the kit is to provide sound output and input facility to applications, sound control (per application and per output 
+- New **SoundKit framework**. The basic idea behind the kit is to provide sound output and input facility to applications, sound control (per application and per output 
 mixer: mute, volume, profiles). Encoding and decoding of sounds (read/write formats, tags handling, etc) is a responsiblity of the applications (or maybe a separate 
 framework like MusicKit).
-- Sound Preferences - uses sound controls facility of SoundKit - 
-- Handcrafted mouse cursor theme - mix of NeXT and MacOS styles (details are [here](https://github.com/trunkmaster/nextspace/wiki/Mouse-Cursors)).
-- NeXT like, but colorful animated boot splash Plymouth theme.
-- Plenty of enhancements and fixes to Workspace. I don't recall all of them (most of them described at [Workspace project page](https://github.com/trunkmaster/nextspace/projects/4)). Main areas of enhancements are:
+- **Sound Preferences** - uses sound controls facility of SoundKit - 
+- Handcrafted **mouse cursor theme** - mix of NeXT and MacOS styles (details are [here](https://github.com/trunkmaster/nextspace/wiki/Mouse-Cursors)).
+- NeXT like, but colorful animated boot splash **Plymouth theme**.
+- Plenty of enhancements and fixes to **Workspace**. I don't recall all of them (most of them described at [Workspace project page](https://github.com/trunkmaster/nextspace/projects/4)). Main areas of enhancements are:
   
   - appicons: click, double-click, right-click menu;
   - window focus handling: manual switch between windows of application and applications; Dock and Icon Yard management (configuration and hiding/showing); focus switch on window appearing and closing; focus switch after workspace switch;
