@@ -1,5 +1,11 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 12.06.2019
+NEXTSPACE 0.85 [is out](https://github.com/trunkmaster/nextspace/releases/tag/0.85).
+This is the first release that one can use without compiling - everything can be installed as RPMs.
+
+Enjoy the NeXT!
+
 ### 25.05.2019
 Almost 2 months have passed since previous news and a lot of things happend.
 
