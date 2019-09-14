@@ -1,5 +1,22 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 15.09.2019
+
+The summer has gone and it's time for some new. I was quite busy with NEXTSPACE since 0.85 release during the summer time. I've created as [ChangeLog](https://github.com/trunkmaster/nextspace/blob/master/Documentation/Changelog.md) file and periodically throw some info about progress there.
+
+Short summary:
+- Login and Workspace got stability and interconnection improvements.
+- Workspace's Copy operation now 4 times faster then before.
+- "Power Off" button in Workspace's Logout panel now powering off the machine.
+- Some modules in Preferences were improved, "Password Preferences" was implemented (almost works).
+- New custom open ans save panels. Much improved usability against vanilla GNUstep panels. New panels honors "Show Hiddes Files" setting (Expert Preferences in Preferences application).
+
+And last but not least NeXTSTEP compatible Help Panel! Just look at this:
+
+![HelpPanel](HelpPanel.png)
+
+ You see original documentation for Workspace Manager (uses RTF, RTFD and TIFF formats) I've copied from OPENSTEP for development purposes. For obvious reasons it cannot be used as is in NEXTSPACE. If you have good English and like NEXTSPACE idea I encourage you to write documentation.
+
 ### 12.06.2019
 NEXTSPACE 0.85 [is out](https://github.com/trunkmaster/nextspace/releases/tag/0.85).
 This is the first release that one can use without compiling - everything can be installed as RPMs.
