@@ -16,7 +16,7 @@ Actually a bunch of good things have happend:
 - Various other: NSScroller and NSBrowser sizing, NSTableView header view correct drawing, NSStepper now looks much cleaner.
 
 Most of the patches in Libraries/gnustep are gone and one patch was added: fixes pulldown menu display in NSPopupButton.
-This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not cmpatible to NEXTSTEP's.
+This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not cmpatible to NEXTSTEP's. Here are screenshots for the record (first before my change, second - after):
 
 As a result I've closed "Switch to the latest release of GNUstep" milestone.
 Although I need some time to check all the sharp edges which floats around due to use of HEAD GNUstep sources.
