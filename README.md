@@ -18,6 +18,8 @@ Actually a bunch of good things have happend:
 Most of the patches in Libraries/gnustep are gone and one patch was added: fixes pulldown menu display in NSPopupButton.
 This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not cmpatible to NEXTSTEP's. Here are screenshots for the record (first before my change, second - after):
 
+![Before](Pulldown-0.png) ![After](Pulldown-1.png)
+
 As a result I've closed "Switch to the latest release of GNUstep" milestone.
 Although I need some time to check all the sharp edges which floats around due to use of HEAD GNUstep sources.
 
