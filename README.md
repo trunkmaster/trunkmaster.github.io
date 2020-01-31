@@ -23,7 +23,7 @@ Although I need some time to check all the sharp edges which floats around due t
 
 As you can see some improvements are fundamental, some - cosmetic. But all of this promises bright future to both GNUstep and NEXTSPACE projects.
 
-P.S.: Do not hesitate to write some kind words to [me](stoyan255@gmail.com)! This is a fuel for open source developer's engine (at least for me).
+P.S.: Do not hesitate to write some kind words to [me](mailto:stoyan255@gmail.com)! This is a fuel for open source developer's engine (at least for me).
 
 Stay tuned!
 
