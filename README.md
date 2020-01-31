@@ -1,8 +1,35 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 31.01.2020
+
+Hello evrybody!
+
+I wrote news long time ago. If you think I'm out of business - no way! - I'm still here.
+I've finally put my hands onto GNUstep improvements that were waiting for good times.
+
+Actually a bunch of good things have happend:
+- GNUstep now supports dynamic screen parameters changes (resolution, layout). It means that calls to NSScreen class returns actual correct values for -frame. It doesn't mean that my SystemKit's classes OSEScreen and OSEDisplay should gone. Quote form Apple documentation: "The NSScreen class is for getting information about the available displays only. If you need additional information or want to change the attributes relating to a display, you must use Quartz Services.". That's it - SystemKit classes provides ability to mainpulate display layouts, switch on/off displays an so on.
+- I've done some routine work to make GORM more usable: Inspectors, Palettes, Inspector shortcuts (Cmd+1, Cmd+2,...) works across the GORM application.
+- My GNUstep backend fixes to input focus handling almost completely adopted (one PR has already submitted). It means switch between workspace now works with latest GNUstep sources. Plus you should never see several application menus visible at once (very annoyed me!).
+- Active/inactive application icons: now they looks correct. It involved GNUstep and WM (wraster) fixes.
+- Insertion point height fixed. It was clearely noticable on text fields with big font size set (Login panel). If text field is empty insertion point is small (as for font with 12 size) and grows bigger on first character entered. It's not the case now.
+- Various other: NSScroller and NSBrowser sizing, NSTableView header view correct drawing, NSStepper now looks much cleaner.
+
+Most of the patches in Libraries/gnustep are gone and one patch was added: fixes pulldown menu display in NSPopupButton.
+This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not cmpatible to NEXTSTEP's.
+
+As a result I've closed "Switch to the latest release of GNUstep" milestone.
+Although I need some time to check all the sharp edges which floats around due to use of HEAD GNUstep sources.
+
+As you can see some improvements are fundamental, some - cosmetic. But all of this promises bright future to both GNUstep and NEXTSPACE projects.
+
+P.S.: Do not hesitate to write some kind words to [me](stoyan255@gmail.com)! This is a fuel for open source developer's engine (at least for me).
+
+Stay tuned!
+
 ### 15.09.2019
 
-The summer has gone and it's time for some new. I was quite busy with NEXTSPACE since 0.85 release during the summer time. I've created as [ChangeLog](https://github.com/trunkmaster/nextspace/blob/master/Documentation/Changelog.md) file and periodically throw some info about progress there.
+The summer has gone and it's time for some news. I was quite busy with NEXTSPACE since 0.85 release during the summer time. I've created as [ChangeLog](https://github.com/trunkmaster/nextspace/blob/master/Documentation/Changelog.md) file and periodically throw some info about progress there.
 
 Short summary:
 - Login and Workspace got stability and interconnection improvements.
