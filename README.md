@@ -1,5 +1,30 @@
 # ![Logo](NEXTSPACE.png) NEXTSPACE News
 
+### 14.05.2020
+
+Hi!
+Short summary of what was going on during last 3 months.
+
+First of all, I describe some major changes to GNUstep frameworks I've made:
+- Main application menu follows key window. If you have multiple windows opened on different monitors you always have main menu visible on monitor where focused (key) window resides. It is likely the window your attention is on at the moment. This feature is dynamical - moving focused window move main menu after you release mouse button.
+- Application menus (main and submenus) are constrained to monitor visible area. You are unable to move menu past the top and left edges. If you want to moved menu down movement constrained to keep menu title visible and readable. This feature quite handy if your main menu was moved out of inital position (top left corner) and you want to return it back.
+
+NEXTSPACE related events:
+- I've made switch to LLVM/clang setup provided by RedHat SCL repo. No differences were noticed since then. This change made possible to set up some automation (compile, build pacakges) in repetitive manner.
+- Continous Integration (CI) was configured based on CircleCI. Thanks to @enzuru.
+- Attempt to create Live CD by @nicktelindert ([isssue #242](https://github.com/trunkmaster/nextspace/issues/242)). Look [here](https://github.com/nicktelindert/nextspace-build-iso) for details.
+- I've created a `nextspace` branch in GNUstep's -back and -gui repos for changes which are not accepted into `master` for various reasons.
+- I've started to develop Network configuration application. It leverages [DBusKit](https://github.com/gnustep/libs-dbuskit) to communicate with NetworkManager.
+
+Release 0.90
+
+Due to the high demand of various modern distributions support and the major changes to codebase, I've decided to make a new intermediate NEXTSPACE release - 0.90. During the preparation to release I plan to finish these tasks:
+  - scripts for automated build of RPMs (done)
+  - automated install for CentOS 7, CentOS 8, Fedora 31 RPMS (in progress)
+  - updated Build and Install guides: it should be much simpler with automation tools (in progress).
+  
+Take care of yourself and prepare for new release!
+
 ### 31.01.2020
 
 Hello evrybody!
@@ -16,7 +41,7 @@ Actually a bunch of good things have happend:
 - Various other: NSScroller and NSBrowser sizing, NSTableView header view correct drawing, NSStepper now looks much cleaner.
 
 Most of the patches in Libraries/gnustep are gone and one patch was added: fixes pulldown menu display in NSPopupButton.
-This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not cmpatible to NEXTSTEP's. Here are screenshots for the record of what my changes are (do you see the difference?):
+This patch cannot be merged into GNUstep source tree for the simple reason: GNUstep tries to mimic the MacOS behavior which is not compatible to NEXTSTEP's. Here are screenshots for the record of what my changes are (do you see the difference?):
 
 ![Before](Pulldown-0.png) ![After](Pulldown-1.png)
 
