@@ -12,14 +12,14 @@ More changes to GNUstep frameworks:
 
 NEXTSPACE changes:
 - I've made switch to LLVM/clang setup provided by RedHat SCL repo. No differences were noticed since then. This change made possible to set up some automation (compile, build pacakges) in repetitive manner.
-- Continous Integration (CI) was configured based on CircleCI. Thanks to @enzuru.
-- Attempt to create Live CD by @nicktelindert ([isssue #242](https://github.com/trunkmaster/nextspace/issues/242)). Look [here](https://github.com/nicktelindert/nextspace-build-iso) for details.
+- Continous Integration (CI) was configured to use CircleCI. Thanks to @enzuru.
+- Successful attempt to create NEXTSPACE Live CD by @nicktelindert ([isssue #242](https://github.com/trunkmaster/nextspace/issues/242)). Look [here](https://github.com/nicktelindert/nextspace-build-iso) for details.
 - I've created a `nextspace` branch in GNUstep's -back and -gui repos for changes which are not accepted into `master` for various reasons.
-- I've started to develop Network configuration application. It leverages [DBusKit](https://github.com/gnustep/libs-dbuskit) to communicate with NetworkManager.
+- I've started to develop network configuration application. It leverages [DBusKit](https://github.com/gnustep/libs-dbuskit) to communicate with NetworkManager. It's in early shape but it works in general.
 
 Release 0.90
 
-Due to the high demand of various modern distributions support and the major changes to codebase, I've decided to make a new intermediate NEXTSPACE release - 0.90. During the preparation to release I plan to finish these tasks:
+Due to the high demand of various modern distributions support and the major changes to code, I've decided to make a new intermediate NEXTSPACE release - 0.90. During the preparation to release I plan to finish these tasks:
   - scripts for automated build of RPMs (done)
   - automated install for CentOS 7, CentOS 8, Fedora 31 RPMS (in progress)
   - updated Build and Install guides: it should be much simpler with automation tools (in progress).
