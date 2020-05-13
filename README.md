@@ -6,11 +6,11 @@ Hi!
 
 Short summary of what was going on during last 3 months.
 
-**More enhancements to GNUstep frameworks:**
+**Enhancements to GNUstep frameworks**
 - Main application menu follows key window. If you have multiple windows opened on different monitors you always have main menu visible on monitor where focused (key) window resides. It is likely the window your attention is on at the moment. This feature is dynamical - moving focused window move main menu after you release mouse button.
 - Application menus (main and submenus) are constrained to monitor visible area. You are unable to move menu past the top and left edges. If you want to moved menu down movement constrained to keep menu title visible and readable. This feature quite handy if your main menu was moved out of inital position (top left corner) and you want to return it back.
 
-**NEXTSPACE changes:**
+**NEXTSPACE changes**
 - I've made switch to LLVM/clang setup provided by RedHat SCL repo. No differences were noticed since then. This change made possible to set up some automation (compile, build pacakges) in repetitive manner.
 - Continous Integration (CI) was configured to use CircleCI. Thanks to @enzuru.
 - Successful attempt to create NEXTSPACE Live CD by @nicktelindert ([isssue #242](https://github.com/trunkmaster/nextspace/issues/242)). Look [here](https://github.com/nicktelindert/nextspace-build-iso) for details.
