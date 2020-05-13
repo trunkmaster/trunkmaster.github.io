@@ -6,18 +6,18 @@ Hi!
 
 Short summary of what was going on during last 3 months.
 
-More changes to GNUstep frameworks:
+**More enhancements to GNUstep frameworks:**
 - Main application menu follows key window. If you have multiple windows opened on different monitors you always have main menu visible on monitor where focused (key) window resides. It is likely the window your attention is on at the moment. This feature is dynamical - moving focused window move main menu after you release mouse button.
 - Application menus (main and submenus) are constrained to monitor visible area. You are unable to move menu past the top and left edges. If you want to moved menu down movement constrained to keep menu title visible and readable. This feature quite handy if your main menu was moved out of inital position (top left corner) and you want to return it back.
 
-NEXTSPACE changes:
+**NEXTSPACE changes:**
 - I've made switch to LLVM/clang setup provided by RedHat SCL repo. No differences were noticed since then. This change made possible to set up some automation (compile, build pacakges) in repetitive manner.
 - Continous Integration (CI) was configured to use CircleCI. Thanks to @enzuru.
 - Successful attempt to create NEXTSPACE Live CD by @nicktelindert ([isssue #242](https://github.com/trunkmaster/nextspace/issues/242)). Look [here](https://github.com/nicktelindert/nextspace-build-iso) for details.
 - I've created a `nextspace` branch in GNUstep's -back and -gui repos for changes which are not accepted into `master` for various reasons.
 - I've started to develop network configuration application. It leverages [DBusKit](https://github.com/gnustep/libs-dbuskit) to communicate with NetworkManager. It's in early shape but it works in general.
 
-Release 0.90
+**Release 0.90**
 
 Due to the high demand of various modern distributions support and the major changes to code, I've decided to make a new intermediate NEXTSPACE release - 0.90. During the preparation to release I plan to finish these tasks:
   - scripts for automated build of RPMs (done)
