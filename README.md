@@ -6,7 +6,7 @@ Hi!
 
 Short summary of what was going on during last 3 months.
 
-More changes to GNUstep frameworks I've made:
+More changes to GNUstep frameworks:
 - Main application menu follows key window. If you have multiple windows opened on different monitors you always have main menu visible on monitor where focused (key) window resides. It is likely the window your attention is on at the moment. This feature is dynamical - moving focused window move main menu after you release mouse button.
 - Application menus (main and submenus) are constrained to monitor visible area. You are unable to move menu past the top and left edges. If you want to moved menu down movement constrained to keep menu title visible and readable. This feature quite handy if your main menu was moved out of inital position (top left corner) and you want to return it back.
 
